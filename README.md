@@ -11,7 +11,7 @@ Some things I have tried:
 * kideny
 * intestines
 
-Contact me at:
+Conact me:
 + [***314.520.8421***](https://pbs.twimg.com/media/CYxm67JWsAAt-50.jpg)
 + ***dan.catanzaro@gmail.com***
 
