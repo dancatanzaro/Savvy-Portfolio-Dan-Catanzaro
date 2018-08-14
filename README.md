@@ -7,7 +7,7 @@
 
 
 Some things I have tried:
-* tongue
+* balut 
 * kideny
 * intestines
 
