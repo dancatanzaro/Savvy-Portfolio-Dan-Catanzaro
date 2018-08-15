@@ -1,7 +1,7 @@
 # Dan's random stuff
 
 
-#I love to travel, cook, and eat.
+## I love to travel, cook, and eat.
 
 **Eating new food is fun.**
 
