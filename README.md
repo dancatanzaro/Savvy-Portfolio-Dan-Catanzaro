@@ -1,7 +1,7 @@
 # Dan's random stuff
 
 
-*I love to travel, cook, and eat food.*
+*I love to travel, cook, and eat.*
 
 **Eating new food is fun.**
 
@@ -9,7 +9,7 @@
 Some things I have tried:
 * balut 
 * kideny
-* intestines
+* scorpion
 
 Conact me:
 + [***314.520.8421***](https://pbs.twimg.com/media/CYxm67JWsAAt-50.jpg)
