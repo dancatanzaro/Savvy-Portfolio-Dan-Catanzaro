@@ -1,3 +1,5 @@
+
+
 body {
     background-color: darkseagreen;
     margin: 0;
@@ -14,14 +16,18 @@ body {
         position: sticky;
         margin: 0 auto;
         color: aquamarine;
-        top: 0;
-        width: 100%
-    }
+        padding-top: 10px;
+        width: 100%;
+        grid-area: navigation;
+   }
     #navigation > ul {
         display: flex;
         flex-direction: row;    
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+    }
+    #navigation a {
+        margin-bottom: 5px
     }
     #navigation a + ul {
         position: absolute;
@@ -46,14 +52,14 @@ body {
     .container {
         max-width: 750px;
         width: 100%;
+        height: 200px;
         display: flex;
         justify-content: space-around;
     }
     #header {
-        padding-top: 70px;
         text-align: center;
-    }
-  
+        grid-area: header;
+    }    
     #header h1 {
         font-style: italic;
         font-family: Arial, Helvetica, sans-serif;
@@ -64,6 +70,7 @@ body {
         padding: 5px 10px;
         background-color: coral;
         width: 100%;
+        grid-area: content;
     }
     #content > h2 {
         font-style: italic;
@@ -82,6 +89,8 @@ body {
     }
     #footer {
         color: blueviolet;
+        display: inline;
+        grid-area: footer;
     }
     .caption {
         text-align: center;
@@ -99,3 +108,43 @@ body {
     li:hover {
         background-color: yellow;
     }
+  
+    form {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        font-family: 'PT Sans Caption', sans-serif;   
+    }
+    input {
+        width: 300px;
+    }
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+    select {
+        width: 300px;
+    }
+    input [type="submit"] {
+        width: 100px;
+    }
+    textarea {
+        width: 300px;
+    }
+    @media screen and (min-width: 500px) {
+        body {
+            grid-template-areas: 
+            "navigation header"
+            "navigation content"
+            "navigation footer";
+            grid-template-rows: min-content auto min-content;
+            grid-template-columns: 20vw auto;
+        }
+        #navigation > ul {
+            flex-direction: column;
+            position: sticky;
+        }
+        #navigation a + ul {
+            left: 53px;
+            top: 0;
+        }
