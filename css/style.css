@@ -9,7 +9,7 @@ body {
         "header"
         "content"
         "footer";
-    grid-template-rows: min-content min-content auto min-content
+    grid-template-rows: min-content min-content auto min-content;
     }
     
     #navigation{
@@ -78,7 +78,7 @@ body {
         color: red;
         border-bottom: 5px;
     }
-    #content > p {
+    #content p {
         color:blue;
         font-family:'Times New Roman', Times, serif;
         font-weight: bold;
