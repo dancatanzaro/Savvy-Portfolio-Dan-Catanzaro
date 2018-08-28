@@ -25,6 +25,7 @@ body {
         flex-direction: row;    
         justify-content: space-between;
         align-items: center;
+        height: 20px;
     }
     #navigation a {
         margin-bottom: 5px
@@ -131,6 +132,17 @@ body {
     textarea {
         width: 300px;
     }
+    .homemade{
+        display: flex;
+        flex-direction: row;
+        height: 225px;
+        width: 300px;
+    }
+    .column {
+        flex: 33.33%;
+        padding: 5px;
+    }
+
     @media screen and (min-width: 500px) {
         body {
             grid-template-areas: 
@@ -148,3 +160,4 @@ body {
             left: 53px;
             top: 0;
         }
+        
