@@ -5,8 +5,10 @@ var welcomeUser = function welcomeUser(){
         welcomeUser();
     }
     else{
-        alert('Welcome to my fun stuff, ' + userName);
+        // alert('Welcome to my fun stuff, ' + userName);
+        document.querySelector('#greeting').innerHTML = `<h3> Welcome to my portfolio page,   ${userName}</h3>`;
     }
 };
 
 welcomeUser();
+
