@@ -4,7 +4,7 @@ var drinkingAge = 21;
 var divideByZero;
 var myNull = null;
 
-var ageLimit = function ageLimit(){
+function ageLimit(){
     var userAge = prompt('How old are you?');
 
     if(userAge < drinkingAge){
@@ -14,7 +14,7 @@ var ageLimit = function ageLimit(){
     else{
         alert(boolean + ', ' + saveWater);
     }
-};
+}
 
 console.log(ageLimit());
 console.log(ageLimit);

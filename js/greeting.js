@@ -1,4 +1,4 @@
-var welcomeUser = function welcomeUser(){
+function welcomeUser(){
     var userName = prompt('What is your name?');
 
     if(!userName){
@@ -8,7 +8,7 @@ var welcomeUser = function welcomeUser(){
         // alert('Welcome to my fun stuff, ' + userName);
         document.querySelector('#greeting').innerHTML = `<h3> Welcome to my portfolio page,   ${userName}</h3>`;
     }
-};
+}
 
 welcomeUser();
 
