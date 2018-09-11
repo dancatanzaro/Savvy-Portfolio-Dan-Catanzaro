@@ -2,21 +2,48 @@ import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
+import greeting from './js/greeting.js';
 
 var State = {
-    'active': 'home',
-    'home': {
-        'title': 'Hey, You Are Home'
+    'active': 'Home',
+    'Home': {
+        'links': [
+            'Blog',
+            'Contact',
+            'Projects'
+        ],
+        'title': 'Hey, You Are Home',
+        'greeting': greeting()
     },
-    'projects': {
-        'title': 'Welcome to my Projects'
+    'Projects': {
+        'links': [
+            'Home',
+            'Contact',
+            'Blog'
+        ],
+    
+        'title': 'Welcome to my Projects',
+        'greeting': 'hey projects'
     },
-    'blog': {
-        'title': 'Welcome to my Blog'
+    'Blog': {
+        'links': [
+            'Home',
+            'Contact',
+            'Projects'
+        ],
+        'title': 'Welcome to my Blog',
+        'greeting': 'hey blog'
     },
-    'contact': {
-        'title': 'Contact me'
-    }
+    'Contact': {
+        'links': [
+            'Home',
+            'Projects',
+            'Blog'
+        ],
+        'title': 'Contact me',
+        'greeting': 'slide in'
+    },
+    
 };
 
 var root = document.querySelector('#root');
@@ -36,7 +63,7 @@ function render(state){
 
     
     root.innerHTML = `
-        ${Navigation()}
+        ${Navigation(state[state.active])}
         ${Header(state[state.active])}
         ${Content()}
         ${Footer()}

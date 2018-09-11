@@ -1,3 +1,4 @@
+export default
 function welcomeUser(){
     var userName = prompt('What is your name?');
 
@@ -6,7 +7,9 @@ function welcomeUser(){
     }
     else{
         // alert('Welcome to my fun stuff, ' + userName);
-        document.querySelector('#greeting').innerHTML = `<h3> Welcome to my portfolio page,   ${userName}</h3>`;
+    
+        // document.querySelector('#greeting').innerHTML =
+        return `<h3> Welcome to my portfolio page,   ${userName}</h3>`;
     }
 }
 
