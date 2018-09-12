@@ -1,75 +1,38 @@
+import Navigo from 'navigo';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
-import greeting from './js/greeting.js';
-
-var State = {
-    'active': 'Home',
-    'Home': {
-        'links': [
-            'Blog',
-            'Contact',
-            'Projects'
-        ],
-        'title': 'Hey, You Are Home',
-        'greeting': greeting()
-    },
-    'Projects': {
-        'links': [
-            'Home',
-            'Contact',
-            'Blog'
-        ],
-    
-        'title': 'Welcome to my Projects',
-        'greeting': 'hey projects'
-    },
-    'Blog': {
-        'links': [
-            'Home',
-            'Contact',
-            'Projects'
-        ],
-        'title': 'Welcome to my Blog',
-        'greeting': 'hey blog'
-    },
-    'Contact': {
-        'links': [
-            'Home',
-            'Projects',
-            'Blog'
-        ],
-        'title': 'Contact me',
-        'greeting': 'slide in'
-    },
-    
-};
+import * as State from './store';
 
 var root = document.querySelector('#root');
-
-function handleNavigation(event){
-    var newState = State;
-
-    newState.active = event.target.textContent;
-
-    event.preventDefault();
-    
-    render(newState);
-}
+var router = new Navigo(window.location.origin);
 
 function render(state){
-    var links;
-
-    
     root.innerHTML = `
         ${Navigation(state[state.active])}
         ${Header(state[state.active])}
-        ${Content()}
+        ${Content(state[state.active])}
         ${Footer()}
         `;
+   
+    router.updatePageLinks();
+}
 
-    links = document.querySelectorAll('#navigation a');
+function handleNavigation(activePage){
+    var newState = Object.assign({}, State);
+
+            
+    newState.active = activePage;
+        
+    render(newState);
+}
+router
+    .on(':page', (params) => handleNavigation(params.page))
+    .on('/', () => handleNavigation('home'))
+    .resolve();
+
+/* links = document.querySelectorAll('#navigation a');
    
     document
         .querySelector('h1')
@@ -98,3 +61,6 @@ function render(state){
 }
 
 render(State);
+
+*/
+

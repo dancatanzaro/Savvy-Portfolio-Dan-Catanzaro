@@ -19,5 +19,9 @@
   "homepage": "https://github.com/dancatanzaro/Savvy-Portfolio-Dan-Catanzaro#readme",
   "devDependencies": {
     "eslint": "^5.3.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "navigo": "^7.1.2"
   }
 }
