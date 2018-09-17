@@ -1,4 +1,5 @@
-export default `
+export default function Home(){
+    return `
 <img class="pho" src="https://pbs.twimg.com/media/CYxm67JWsAAt-50.jpg" alt="phoUniversity">
                              <div class="caption">
                                     where i want to go to university
@@ -23,3 +24,4 @@ export default `
       
 
     `;
+}
