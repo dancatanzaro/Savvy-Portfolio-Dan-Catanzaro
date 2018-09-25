@@ -1,4 +1,4 @@
-/* export default
+export default
 function welcomeUser(){
     var userName = prompt('What is your name?');
 
@@ -13,5 +13,5 @@ function welcomeUser(){
     }
 }
 
-// welcomeUser();
+welcomeUser();
 

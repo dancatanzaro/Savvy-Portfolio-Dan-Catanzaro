@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "lodash": "^4.17.10",
-    "navigo": "^7.1.2"
+    "lodash": "^4.17.11",
+    "navigo": "^7.1.2",
+    "popmotion": "^8.4.0"
   }
 }

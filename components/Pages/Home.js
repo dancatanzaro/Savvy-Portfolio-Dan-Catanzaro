@@ -1,4 +1,29 @@
-export default function Home(){
+import {
+    capitalize,
+    kebabCase }
+    from 'lodash';
+
+function Repo(repo){
+    var name = kebabCase(repo.name)
+        .split('-')
+        .map(capitalize)
+        .join('  ');
+
+    
+    return `
+    <li>
+        <a href="${repo.html_url}"> ${name}</a>
+    </li>
+    `;
+}
+
+export default function Home(state){
+    var repos = state
+        .repos
+        .map(Repo)
+        .join('');
+
+
     return `
 <img class="pho" src="https://pbs.twimg.com/media/CYxm67JWsAAt-50.jpg" alt="phoUniversity">
                              <div class="caption">
@@ -20,6 +45,10 @@ export default function Home(){
                 <a href="https://en.wikipedia.org/wiki/Thailand" target="_blank" rel="noopener noreferrer">Thailand</a>
                 </li>
             </ul>
+        <ol>
+            ${repos}
+        </ol>
+
         <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos inventore minima, a rerum possimus asperiores assumenda beatae voluptatum ducimus, quis officiis iure ex iusto molestias praesentium, eos illum enim. Illo.</p>
       
 
