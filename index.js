@@ -56,7 +56,7 @@ axios
 axios
     .get('https://api.github.com/users/dancatanzaro/repos', {
         'headers': {
-            'Authorization': `token ${process.env.GITHUB_API_KEY}`
+            'Authorization': `token ${process.env.GITHUB_API_KEY}` //eslint-disable-line
         }
     })
     .then((response) => {
