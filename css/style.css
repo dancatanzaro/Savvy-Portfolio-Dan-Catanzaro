@@ -89,6 +89,16 @@ body {
         font-family: Arial, Helvetica, sans-serif;
         color: blue;
         margin: 5px;
+        cursor: pointer;
+        opacity: .25;
+        transition: .15s opacity ease, .25s font-size ease;
+    }
+#header h1.fart {
+    font-size: 200px;
+}    
+
+    #header h1:hover {
+        opacity: 1;
     }
 
     #content {

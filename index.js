@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Navigo from 'navigo';
+import { tween } from 'popmotion';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Greeter from './components/Greeter';
@@ -26,6 +27,14 @@ function render(){
         ${Footer(state)}
         `;
     greeter.render(root);
+  
+    document
+        .querySelector('h1')
+        .addEventListener('click', (event) => {
+            var animation = tween({ 'to': 100, 'duration': 2000 });
+
+            animation.start((value) => event.target.style = `font-size: ${value}px`);
+        });
    
     router.updatePageLinks();
 }
