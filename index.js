@@ -44,7 +44,7 @@ axios.get('https://jsonplaceholder.typicode.com/posts')
     });
 
 axios
-    .get('http://api.openweathermap.org/data/2.5/weather?zip=63017,us&APPID=8beac46af307f8e14ce5a810e36347f3')
+    .get('https://api.openweathermap.org/data/2.5/weather?zip=63017,us&APPID=8beac46af307f8e14ce5a810e36347f3')
     .then((response) => {
         store.dispatch((state) => {
             state.weather = response.data;
